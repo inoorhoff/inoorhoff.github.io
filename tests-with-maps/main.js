@@ -9,6 +9,19 @@ import {get as getProjection} from 'ol/proj.js';
 import {getTopLeft, getWidth} from 'ol/extent.js';
 */
 
+var Map = ol/Map;
+var OSM = ol/source/OSM.js;
+var TileLayer = ol/layer/Tile.js;
+var View = ol/View.js;
+var WMTS = ol/source/WMTS.js;
+var WMTSTileGrid = ol/tilegrid/WMTS.js;
+
+/*
+import {get as getProjection} from 'ol/proj.js';
+import {getTopLeft, getWidth} from 'ol/extent.js';
+*/
+
+
 const projection = getProjection('EPSG:3857');
 const projectionExtent = projection.getExtent();
 const size = getWidth(projectionExtent) / 256;
